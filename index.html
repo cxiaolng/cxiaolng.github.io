@@ -319,10 +319,16 @@
       
         
           
-            <p>使用本地linux批量模糊删除远程机器redis值</p>
-<p>如删除远程机spring:session开头的key值</p>
-<pre><code>#./redis-cli -h [ip] -a [password] -p 6379 -n dbsize keys &quot;spring:session*&quot; | xagrs ./redis-cli -h [ip] -a [password] -p 6379 -n dbsize del
-</code></pre>
+            <p>使用本地linux批量模糊删除redis值</p>
+<ul>
+<li>如删除远程机spring:session开头的key值<pre><code>#./redis-cli -h [ip] -a [password] -p 6379 -n dbsize keys &quot;spring:session*&quot; | xargs ./redis-cli -h [ip] -a [password] -p 6379 -n dbsize del
+</code></pre></li>
+</ul>
+<ul>
+<li>删除本机spring:session开头的key值<pre><code>#./redis-cli keys &quot;spring:session*&quot; | xargs ./redis-cli del
+</code></pre></li>
+</ul>
+
           
         
       
