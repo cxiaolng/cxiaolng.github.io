@@ -251,6 +251,165 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="https://cxiaolng.github.io/2017/05/25/ajax-delete-request/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="知无涯">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="My Archive">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2017/05/25/ajax-delete-request/" itemprop="url">使用Ajax请求DELETE请求</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-05-25T20:54:45+08:00">
+                2017-05-25
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>在使用jquery的ajax请求delete请求时，请求响应为404</p>
+<p>js代码</p>
+<pre><code>$.ajax({
+    url : &quot;/urlmapping&quot;,
+    data : {key:key,value:value},
+    type : &quot;delete&quot;,
+    dataType : &apos;json&apos;,
+    success : function(data) {
+        if(response == tue){
+
+            layer.close(loader);
+        }
+    },
+    error : function(response) {
+        layer.close(loader);
+        layer.msg(&quot;失败&quot;,{icon:2,time:2000})
+    }
+});
+</code></pre><p>服务端代码：</p>
+<pre><code>@RequestMapping(value = &quot;/urlmapping&quot;, method = RequestMethod.DELETE)
+@ResponseBody
+public boolean urlMapping(@RequestBody MappingParam mappingParam){
+
+    ......
+
+}
+</code></pre><p>经查jquery是这样定义的</p>
+<blockquote>
+<p>type String </p>
+<p>(默认: “GET”) 请求方式 (“POST” 或 “GET”)， 默认为 “GET”。注意：其它 HTTP 请求方法，如 PUT 和 DELETE 也可以使用，但仅部分浏览器支持</p>
+</blockquote>
+<p>解决方案</p>
+<pre><code>$.ajax({
+    url : &quot;/urlmapping&quot;,
+    data : {key:key,value:value,_method:DELETE},
+    type : &quot;post&quot;,
+    dataType : &apos;json&apos;,
+    success : function(data) {
+        if(response == tue){
+
+            layer.close(loader);
+        }
+    },
+    error : function(response) {
+        layer.close(loader);
+        layer.msg(&quot;失败&quot;,{icon:2,time:2000})
+    }
+});
+</code></pre>
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
     <link itemprop="mainEntityOfPage" href="https://cxiaolng.github.io/2017/05/18/redis-batch-del/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -519,7 +678,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">2</span>
+                <span class="site-state-item-count">3</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -532,7 +691,7 @@
             
             <div class="site-state-item site-state-tags">
               <a href="/tags/index.html">
-                <span class="site-state-item-count">4</span>
+                <span class="site-state-item-count">5</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
