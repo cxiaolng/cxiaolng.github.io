@@ -251,6 +251,137 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="https://cxiaolng.github.io/2017/06/09/custom-gradle-repository/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="知无涯">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="My Archive">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2017/06/09/custom-gradle-repository/" itemprop="url">自定义 gradle 仓库地址</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-06-09T12:49:26+08:00">
+                2017-06-09
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>下载gradle稳定版本： <a href="https://gradle.org/releases" target="_blank" rel="external">V3.5</a><br>直接解压到安装目录如：C:\Program Files\gradle-3.5<br>进入到C:\Program Files\gradle-3.5\init.d目录<br>新建配置文件</p>
+<p>init.gradle</p>
+<pre><code>allprojects{
+    repositories {
+        def REPOSITORY_URL = &apos;http://maven.aliyun.com/nexus/content/groups/public/&apos;
+        all { ArtifactRepository repo -&gt;
+            if(repo instanceof MavenArtifactRepository){
+                def url = repo.url.toString()
+                if (url.startsWith(&apos;https://repo1.maven.org/maven2&apos;) || url.startsWith(&apos;https://jcenter.bintray.com/&apos;)) {
+                    project.logger.lifecycle &quot;Repository ${repo.url} replaced by $REPOSITORY_URL.&quot;
+                    remove repo
+                }
+            }
+        }
+        maven {
+            url REPOSITORY_URL
+        }
+    }
+}
+</code></pre><p>将以这个配置直接copy到init.gradle即可</p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
     <link itemprop="mainEntityOfPage" href="https://cxiaolng.github.io/2017/06/03/mybatis-lazyload-json-serializer/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -793,7 +924,7 @@ public boolean urlMapping(@RequestBody MappingParam mappingParam){
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">4</span>
+                <span class="site-state-item-count">5</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -806,7 +937,7 @@ public boolean urlMapping(@RequestBody MappingParam mappingParam){
             
             <div class="site-state-item site-state-tags">
               <a href="/tags/index.html">
-                <span class="site-state-item-count">6</span>
+                <span class="site-state-item-count">7</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
