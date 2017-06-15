@@ -88,17 +88,17 @@
 
 
 
-<meta name="description" content="cron表达式格式    分 时 天 月 周         00 12    表示每天12:00执行一次 /5     表示每5分钟执行一次 crontab命令-u  查询user用户下的crontab-l 查看当前用户所有crontab-e 编辑当前用户crontab 同步linux时间  00 12   * /usr/sbin/ntpdate -u ntp.api.bz ntp.api.bz">
+<meta name="description" content="cron表达式格式 分  时  天  月  周 00 12 * * * 表示每天12:00执行一次*/5 * * * * 表示每5分钟执行一次 crontab命令-u  查询user用户下的crontab-l 查看当前用户所有crontab-e 编辑当前用户crontab 同步linux时间  00 12   * /usr/sbin/ntpdate -u ntp.api.bz ntp.api.bz">
 <meta name="keywords" content="crontab">
 <meta property="og:type" content="article">
 <meta property="og:title" content="使用crontab ntpdate同步linux时间">
 <meta property="og:url" content="https://cxiaolng.github.io/2017/06/15/linux-crontab-ntpdate/index.html">
 <meta property="og:site_name" content="My Archive">
-<meta property="og:description" content="cron表达式格式    分 时 天 月 周         00 12    表示每天12:00执行一次 /5     表示每5分钟执行一次 crontab命令-u  查询user用户下的crontab-l 查看当前用户所有crontab-e 编辑当前用户crontab 同步linux时间  00 12   * /usr/sbin/ntpdate -u ntp.api.bz ntp.api.bz">
-<meta property="og:updated_time" content="2017-06-15T02:16:37.286Z">
+<meta property="og:description" content="cron表达式格式 分  时  天  月  周 00 12 * * * 表示每天12:00执行一次*/5 * * * * 表示每5分钟执行一次 crontab命令-u  查询user用户下的crontab-l 查看当前用户所有crontab-e 编辑当前用户crontab 同步linux时间  00 12   * /usr/sbin/ntpdate -u ntp.api.bz ntp.api.bz">
+<meta property="og:updated_time" content="2017-06-15T02:45:19.437Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="使用crontab ntpdate同步linux时间">
-<meta name="twitter:description" content="cron表达式格式    分 时 天 月 周         00 12    表示每天12:00执行一次 /5     表示每5分钟执行一次 crontab命令-u  查询user用户下的crontab-l 查看当前用户所有crontab-e 编辑当前用户crontab 同步linux时间  00 12   * /usr/sbin/ntpdate -u ntp.api.bz ntp.api.bz">
+<meta name="twitter:description" content="cron表达式格式 分  时  天  月  周 00 12 * * * 表示每天12:00执行一次*/5 * * * * 表示每5分钟执行一次 crontab命令-u  查询user用户下的crontab-l 查看当前用户所有crontab-e 编辑当前用户crontab 同步linux时间  00 12   * /usr/sbin/ntpdate -u ntp.api.bz ntp.api.bz">
 
 
 
@@ -316,24 +316,8 @@
 
       
         <p>cron表达式格式</p>
-<table>
-<thead>
-<tr>
-<th>分</th>
-<th>时</th>
-<th>天</th>
-<th>月</th>
-<th>周</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td></td>
-</tr>
-</tbody>
-</table>
-<p>00 12 <em> </em> <em> 表示每天12:00执行一次
-</em>/5 <em> </em> <em> </em> 表示每5分钟执行一次</p>
+<p>分  时  天  月  周</p>
+<p>00 12 * * * 表示每天12:00执行一次<br>*/5 * * * * 表示每5分钟执行一次</p>
 <p>crontab命令<br>-u <user> 查询user用户下的crontab<br>-l 查看当前用户所有crontab<br>-e 编辑当前用户crontab</user></p>
 <p>同步linux时间 </p>
 <p>00 12 <em> </em> * /usr/sbin/ntpdate -u ntp.api.bz</p>

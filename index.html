@@ -320,24 +320,8 @@
         
           
             <p>cron表达式格式</p>
-<table>
-<thead>
-<tr>
-<th>分</th>
-<th>时</th>
-<th>天</th>
-<th>月</th>
-<th>周</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td></td>
-</tr>
-</tbody>
-</table>
-<p>00 12 <em> </em> <em> 表示每天12:00执行一次
-</em>/5 <em> </em> <em> </em> 表示每5分钟执行一次</p>
+<p>分  时  天  月  周</p>
+<p>00 12 * * * 表示每天12:00执行一次<br>*/5 * * * * 表示每5分钟执行一次</p>
 <p>crontab命令<br>-u <user> 查询user用户下的crontab<br>-l 查看当前用户所有crontab<br>-e 编辑当前用户crontab</user></p>
 <p>同步linux时间 </p>
 <p>00 12 <em> </em> * /usr/sbin/ntpdate -u ntp.api.bz</p>
