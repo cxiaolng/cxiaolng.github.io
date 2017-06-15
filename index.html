@@ -251,6 +251,140 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="https://cxiaolng.github.io/2017/06/15/linux-crontab-ntpdate/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="知无涯">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="My Archive">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2017/06/15/linux-crontab-ntpdate/" itemprop="url">使用crontab ntpdate同步linux时间</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-06-15T10:06:13+08:00">
+                2017-06-15
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>cron表达式格式</p>
+<table>
+<thead>
+<tr>
+<th>分</th>
+<th>时</th>
+<th>天</th>
+<th>月</th>
+<th>周</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>00 12 <em> </em> <em> 表示每天12:00执行一次
+</em>/5 <em> </em> <em> </em> 表示每5分钟执行一次</p>
+<p>crontab命令<br>-u <user> 查询user用户下的crontab<br>-l 查看当前用户所有crontab<br>-e 编辑当前用户crontab</user></p>
+<p>同步linux时间 </p>
+<p>00 12 <em> </em> * /usr/sbin/ntpdate -u ntp.api.bz</p>
+<p>ntp.api.bz 为上海电信NTP时间服务器</p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
     <link itemprop="mainEntityOfPage" href="https://cxiaolng.github.io/2017/06/09/custom-gradle-repository/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -924,7 +1058,7 @@ public boolean urlMapping(@RequestBody MappingParam mappingParam){
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">5</span>
+                <span class="site-state-item-count">6</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -937,7 +1071,7 @@ public boolean urlMapping(@RequestBody MappingParam mappingParam){
             
             <div class="site-state-item site-state-tags">
               <a href="/tags/index.html">
-                <span class="site-state-item-count">7</span>
+                <span class="site-state-item-count">8</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
