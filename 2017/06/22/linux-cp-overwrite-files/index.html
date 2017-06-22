@@ -72,7 +72,7 @@
 <link href="/css/main.css?v=5.1.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="linux," />
 
 
 
@@ -88,15 +88,19 @@
 
 
 
-<meta name="description" content="吾生也有涯，而知也无涯。以有涯随无涯，殆已。已而为知者，殆而已矣。——《庄子·内篇·养生主第三》">
-<meta property="og:type" content="website">
-<meta property="og:title" content="My Archive">
-<meta property="og:url" content="https://cxiaolng.github.io/tags/crontab/index.html">
+<meta name="description" content="使用cp命令#cp -r -p /opt/file.txt /opt/src/file.txt将/opt/src/file.txt 替换成 /opt/file.txt时总时提示cp: overwrite ‘/opt/file.txt’? 使用#cp -r -f /opt/file.txt /opt/src/file.txt同样还是提示 这个问题主要是由于alias别名设置导致 命令#alias查看">
+<meta name="keywords" content="linux">
+<meta property="og:type" content="article">
+<meta property="og:title" content="cp 替换文件">
+<meta property="og:url" content="https://cxiaolng.github.io/2017/06/22/linux-cp-overwrite-files/index.html">
 <meta property="og:site_name" content="My Archive">
-<meta property="og:description" content="吾生也有涯，而知也无涯。以有涯随无涯，殆已。已而为知者，殆而已矣。——《庄子·内篇·养生主第三》">
+<meta property="og:description" content="使用cp命令#cp -r -p /opt/file.txt /opt/src/file.txt将/opt/src/file.txt 替换成 /opt/file.txt时总时提示cp: overwrite ‘/opt/file.txt’? 使用#cp -r -f /opt/file.txt /opt/src/file.txt同样还是提示 这个问题主要是由于alias别名设置导致 命令#alias查看">
+<meta property="og:image" content="http://i.imgur.com/IUARvJb.png">
+<meta property="og:updated_time" content="2017-06-22T09:05:17.188Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="My Archive">
-<meta name="twitter:description" content="吾生也有涯，而知也无涯。以有涯随无涯，殆已。已而为知者，殆而已矣。——《庄子·内篇·养生主第三》">
+<meta name="twitter:title" content="cp 替换文件">
+<meta name="twitter:description" content="使用cp命令#cp -r -p /opt/file.txt /opt/src/file.txt将/opt/src/file.txt 替换成 /opt/file.txt时总时提示cp: overwrite ‘/opt/file.txt’? 使用#cp -r -f /opt/file.txt /opt/src/file.txt同样还是提示 这个问题主要是由于alias别名设置导致 命令#alias查看">
+<meta name="twitter:image" content="http://i.imgur.com/IUARvJb.png">
 
 
 
@@ -124,13 +128,13 @@
 
 
 
-  <link rel="canonical" href="https://cxiaolng.github.io/tags/crontab/"/>
+  <link rel="canonical" href="https://cxiaolng.github.io/2017/06/22/linux-cp-overwrite-files/"/>
 
 
 
 
 
-  <title>标签: crontab | My Archive</title>
+  <title>cp 替换文件 | My Archive</title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -155,7 +159,7 @@
     
   
 
-  <div class="container sidebar-position-left  ">
+  <div class="container sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -239,44 +243,158 @@
           <div id="content" class="content">
             
 
-  <div id="posts" class="posts-collapse">
-    <div class="collection-title">
-      <h1>crontab<small>标签</small>
-      </h1>
-    </div>
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="https://cxiaolng.github.io/2017/06/22/linux-cp-overwrite-files/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="知无涯">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="My Archive">
+    </span>
 
     
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">cp 替换文件</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-06-22T16:52:40+08:00">
+                2017-06-22
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body" itemprop="articleBody">
+
+      
       
 
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+      
+        <p>使用cp命令<br><code>#cp -r -p /opt/file.txt /opt/src/file.txt</code><br>将<code>/opt/src/file.txt</code> 替换成 <code>/opt/file.txt</code>时总时提示<br><code>cp: overwrite ‘/opt/file.txt’?</code></p>
+<p>使用<code>#cp -r -f /opt/file.txt /opt/src/file.txt</code>同样还是提示</p>
+<p>这个问题主要是由于alias别名设置导致</p>
+<p>命令<br><code>#alias</code><br>查看如下</p>
+<p><img src="http://i.imgur.com/IUARvJb.png" alt=""></p>
+<p>cp被设置成了cp -i</p>
+<p>解决方案：</p>
+<ol>
+<li>使用 <code>#\cp -r -p /opt/file.txt /opt/src/file.txt</code> 在cp前加\</li>
+<li>修改 ~/.bashrc 文件将 cp别名注释掉即可</li>
+</ol>
 
-      <h2 class="post-title">
+      
+    </div>
+
+    <div>
+      
         
-            <a class="post-title-link" href="/2017/06/15/linux-crontab-ntpdate/" itemprop="url">
-              
-                <span itemprop="name">使用crontab ntpdate同步linux时间</span>
-              
-            </a>
+
+      
+    </div>
+
+    <div>
+      
         
-      </h2>
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-06-15T10:06:13+08:00"
-              content="2017-06-15" >
-          06-15
-        </time>
-      </div>
+      
+    </div>
 
-    </header>
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/linux/" rel="tag"># linux</a>
+          
+        </div>
+      
+
+      
+        
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/06/15/linux-crontab-ntpdate/" rel="next" title="使用crontab ntpdate同步linux时间">
+                <i class="fa fa-chevron-left"></i> 使用crontab ntpdate同步linux时间
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </article>
 
 
-    
-  </div>
 
-  
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -284,6 +402,10 @@
 
 
           
+  <div class="comments" id="comments">
+    
+  </div>
+
 
         </div>
         
@@ -481,6 +603,10 @@
   
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.1"></script>
+
+
 
   
 
